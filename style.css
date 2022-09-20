@@ -1,0 +1,344 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --light-magenta: hsl(293, 100%, 63%);
+    --very-light-magenta: hsl(289, 100%, 72%);
+    --pale-violet: hsl(276, 100%, 81%);
+    --light-violet: hsl(264, 100%, 61%);
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(Rubik/Rubik-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body{
+    background: var(--light-grayish-violet);
+    overflow-x: hidden;
+}
+
+p{
+    word-spacing: 1px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: var(--dark-grayish-violet);
+}
+
+.bg{
+    z-index: -2;
+    position: absolute;
+    height: 650px;
+    background: linear-gradient(100deg, var(--light-violet) 30% , var(--light-magenta) 100%);
+}
+
+.top{
+    border-bottom-right-radius: 65%;
+    width: 450px;
+    top: 0;
+    left: -15em;
+}
+
+.bottom{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    bottom: -12em;
+    width: 350px;
+    right: -45%;
+    opacity: 5%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 365px;
+    margin: 35px auto;
+    padding: 25px;
+}
+
+
+.app{
+    padding: 10px;
+    width: 300px;
+    background-color: var(--white);
+    border-radius: 30px;
+    box-shadow: 3px 7px 15px 5px rgba(95, 10, 10, 0.2);
+    margin: 10px auto;
+    animation: app 1s 200ms ease-in;
+}
+
+@keyframes app{
+    0%{
+        transform: translateX(-200%) scale(0);
+    }
+
+    50%{
+        transform: translateX(-150%) scale(.5);
+    }
+
+    75%{
+        transform: translateX(-100%) scale(.75);
+    }
+
+    100%{
+        transform: translateX(0) scale(1);
+    }
+}
+
+.container-fluid{
+    position: relative;
+    background-color: #ddd;
+    border-radius: 30px;
+}
+
+.screen-curve{
+    position: absolute;
+    background: var(--white);
+    height: 24px;
+    top: 0;
+    right: 60px;
+    width: 170px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.chat-header{
+    color: var(--light-grayish-violet);
+    display: flex;
+    padding: 15px;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    border-radius: 10px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background: linear-gradient(90deg, var(--light-violet) 30% , var(--light-magenta) 100%);
+}
+
+.app p{
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 9px;
+}
+
+.user-img{
+    border: 2px solid var(--white);
+    width: 30px;
+    /* margin: 20px 10px auto; */
+    margin-top: 15px;
+    border-radius: 50%;
+}
+
+.info{
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.info p{
+    color: var(--pale-violet);
+    margin: 0;
+    margin-top: 3px;
+}
+
+.messages{
+    background: var(--light-grayish-violet);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 10px;
+}
+
+
+.message{
+    padding: 10px;
+    width: fit-content;
+    max-width: 165px;
+}
+
+.left{
+    color: var(--moderate-violet);
+    background: hsl(269, 47%, 90%);
+    clear: both;
+    float: left;
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+}
+
+.right{
+    border-radius: 20px;
+    color: var(--desaturated-dark-violet);
+    background: var(--white);
+    clear: both;
+    float: right;
+}
+
+.pictures {
+    background: none;
+    width: 270px;
+    display: flex;
+    justify-content: flex-end;
+}
+.pictures img{
+    width: 40px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 180px;
+    padding: 15px;
+    margin: 5px;
+    background: linear-gradient(270deg, var(--light-violet) , var(--light-magenta));
+}
+
+.options.second{
+    margin-bottom: 15px;
+}
+
+.options p{
+    margin-bottom: 0px;
+    color: var(--white);
+    opacity: 70%;
+}
+
+.radio{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    outline: 2px solid var(--very-light-magenta);
+}
+
+.choice{
+    margin-top: 2px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.price{
+    font-weight: 700;
+    color: var(--white);
+}
+
+.type-message{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    height: 35px;
+    width: 260px;
+    background: var(--white);
+    border-radius: 50px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.type-message p{
+    color: var(--grayish-blue);
+    position: absolute;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 400;
+    left: 25px;
+    top: 12px;
+}
+
+.send{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 50%;
+    right: 5px;
+    top: 5px;
+    background: var(--very-dark-desaturated-violet);
+}
+
+.back{
+    padding-top: 10px;
+    height: 25px;
+    width: 15px;
+}
+
+.menu{
+    padding-top: 15px;
+}
+
+.advert{
+    margin-top: 20px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.advert h1{
+    margin: 10px;
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--very-dark-desaturated-violet);
+}
+
+.advert p{
+    word-spacing: 3px;
+    margin: 30px 5px;
+    font-size: 16px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1000px) {
+    *{
+        text-align: left;
+    }
+    .container{
+        max-width: 1300px;
+        flex-direction: row;
+    }
+
+    .advert{
+        flex-basis: 40%;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .bg{
+        height: 75vh;
+    }
+    
+    .top{
+        width: 35vw;
+        border-bottom-left-radius: 50%;
+        left: -9em;
+    }
+    
+    .bottom{
+        width: 550px;
+        bottom: 0;
+        right: -15em;
+    }
+    
+}
